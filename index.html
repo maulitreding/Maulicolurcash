@@ -1,12 +1,12 @@
-`html
 <!DOCTYPE html>
 <html lang="mr">
 <head>
   <meta charset="UTF-8">
   <title>Mauli Color Cash</title>
   <style>
-    body { text-align: center; font-family: sans-serif; background: #fff8f0; }
-    button { padding: 10px 20px; margin: 10px; font-size: 18px; }
+    body { text-align: center; font-family: sans-serif; background: #fff0f5; }
+    h1 { color: #d1005c; }
+    button { padding: 10px 20px; margin: 10px; font-size: 18px; border-radius: 8px; border: none; }
     #result { font-size: 22px; margin-top: 20px; color: green; }
   </style>
 </head>
@@ -14,9 +14,9 @@
   <h1>माऊली कलर कॅश</h1>
   <p>खालील रंगांपैकी एक निवडा:</p>
 
-  <button onclick="checkColor('लाल')">🔴 लाल</button>
-  <button onclick="checkColor('पिवळा')">🟡 पिवळा</button>
-  <button onclick="checkColor('हिरवा')">🟢 हिरवा</button>
+  <button onclick="checkColor('लाल')" style="background-color: red; color: white;">🔴 लाल</button>
+  <button onclick="checkColor('पिवळा')" style="background-color: yellow;">🟡 पिवळा</button>
+  <button onclick="checkColor('हिरवा')" style="background-color: green; color: white;">🟢 हिरवा</button>
 
   <div id="result"></div>
 
@@ -26,11 +26,11 @@
       const winningColor = colors[Math.floor(Math.random() * colors.length)];
 
       if (userColor === winningColor) {
-        document.getElementById('result').innerHTML = 🎉 अभिनंदन! तुम्ही <b>${userColor}</b> निवडून जिंकलात!;
+        document.getElementById('result').innerHTML = `🎉 <b>${userColor}</b> निवडून तुम्ही जिंकलात! बक्षीस मिळवा!`;
       } else {
-        document.getElementById('result').innerHTML = 😢 क्षमस्व! विजयी रंग होता <b>${winningColor}</b>. पुन्हा प्रयत्न करा.;
+        document.getElementById('result').innerHTML = `😢 विजयी रंग होता <b>${winningColor}</b>. पुन्हा प्रयत्न करा.`;
       }
     }
   </script>
 </body>
-</html
+</html>
