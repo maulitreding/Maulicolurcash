@@ -6,8 +6,19 @@
   <style>
     body { text-align: center; font-family: sans-serif; background: #fff0f5; }
     h1 { color: #d1005c; }
-    button { padding: 10px 20px; margin: 10px; font-size: 18px; border-radius: 8px; border: none; }
-    #result { font-size: 22px; margin-top: 20px; color: green; }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    #result {
+      font-size: 22px;
+      margin-top: 20px;
+      color: green;
+    }
   </style>
 </head>
 <body>
@@ -26,7 +37,7 @@
       const winningColor = colors[Math.floor(Math.random() * colors.length)];
 
       if (userColor === winningColor) {
-        document.getElementById('result').innerHTML = `🎉 <b>${userColor}</b> निवडून तुम्ही जिंकलात! बक्षीस मिळवा!`;
+        document.getElementById('result').innerHTML = `🎉 <b>${userColor}</b> निवडून तुम्ही जिंकलात!`;
       } else {
         document.getElementById('result').innerHTML = `😢 विजयी रंग होता <b>${winningColor}</b>. पुन्हा प्रयत्न करा.`;
       }
