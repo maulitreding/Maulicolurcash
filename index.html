@@ -3,9 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Mauli Color Cash</title>
+  <style>
+    body { text-align: center; font-family: sans-serif; background: #fff8f0; }
+    button { padding: 10px 20px; margin: 10px; font-size: 18px; }
+    #result { font-size: 22px; margin-top: 20px; color: green; }
+  </style>
 </head>
 <body>
-  <h1>Mauli Color Cash</h1>
-  <p>तुमचा रंग निवडा आणि बक्षीस जिंका!</p>
+  <h1>माऊली कलर कॅश</h1>
+  <p>खालील रंगांपैकी एक निवडा:</p>
+
+  <button onclick="checkColor('लाल')">🔴 लाल</button>
+  <button onclick="checkColor('पिवळा')">🟡 पिवळा</button>
+  <button onclick="checkColor('हिरवा')">🟢 हिरवा</button>
+
+  <div id="result"></div>
+
+  <script>
+    function checkColor(userColor) {
+      const colors = ['लाल', 'पिवळा', 'हिरवा'];
+      const winningColor = colors[Math.floor(Math.random() * colors.length)];
+
+      if (userColor === winningColor) {
+        document.getElementById('result').innerHTML = `🎉 अभिनंदन! तुम्ही <b>${userColor}</b> निवडून जिंकलात!`;
+      } else {
+        document.getElementById('result').innerHTML = `😢 क्षमस्व! विजयी रंग होता <b>${winningColor}</b>. पुन्हा प्रयत्न करा.`;
+      }
+    }
+  </script>
 </body>
 </html>
